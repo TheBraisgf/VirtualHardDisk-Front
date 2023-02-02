@@ -1,0 +1,14 @@
+.button{
+    background-color: #FCB040;
+    color: white;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3rem;
+    border-radius: 50px;
+}
+.button>a{
+    text-decoration: none;
+    color: white;
+}

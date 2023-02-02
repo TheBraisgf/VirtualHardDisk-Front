@@ -1,0 +1,15 @@
+.Header{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+}
+
+.logo{
+    width: 6rem;
+}
+
+p{
+    color:white;
+    display: flex;
+    justify-content: flex-end;
+margin: 2rem;}
