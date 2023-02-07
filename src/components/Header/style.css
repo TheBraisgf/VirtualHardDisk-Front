@@ -1,15 +1,19 @@
-.Header{
-    display: flex;
-    flex-direction: row;
-    width: 80vw;
+header {
+  padding: 1rem 4rem;
+  border: 1px solid red;
+  width: 100vw;
 }
 
-.logo{
-    width: 6rem;
+img {
+  display: flex;
+  width: 9rem;
 }
 
-p{
-    color:white;
-    display: flex;
-    justify-content: flex-end;
-margin: 2rem;}
+header ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  font-size: 2rem;
+  list-style-type: none;
+  color: white;
+}

@@ -1,18 +1,25 @@
 import "./style.css";
-import VHD_logo from "../../assets/VHD_logo.png"
 
+import { Link } from "react-router-dom";
 
-const Header = ()=>{
-return(
-<section className="Header">
-    <img className="logo" src={VHD_logo} alt="logo"/>
-    <div className="links">
-      <p>About Us</p>
-      <p>Register</p>
-      <p>Login</p>
-      </div>
-      </section>
-)
-}
+import VHD_logo from "../../assets/VHD_logo.png";
 
-export default Header
+const Header = () => {
+  return (
+    <header className="Header">
+      <Link className="link" to="/">
+        <img className="logo" src={VHD_logo} alt="logo" />
+      </Link>
+
+      <nav>
+        <ul>
+          <li>About Us</li>
+          <Link to="/register">Register</Link>
+          <li>Login</li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;

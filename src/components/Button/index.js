@@ -1,10 +1,11 @@
 import "./style.css";
 
-const Button =({text})=>{
+const Button = ({ text, destination }) => {
+  return (
+    <button className="button">
+      <a href={destination}>{text}</a>
+    </button>
+  );
+};
 
-    return(
-        <button className="button"><a href="">{text}</a></button>
-    )
-}
-
-export default Button
+export default Button;
