@@ -43,13 +43,10 @@ const LoginForm = () => {
               throw new Error(body.message);
             }
 
-            //DELETEME
-            console.log(body);
-
             // Cambiamos el estado y metemos el token recogido de la API
             setToken(body.data.token);
             // Redireccionamos al usuario a inicio
-            navigate(`/`);
+            navigate(`/profile`);
             // Mandamos una alerta indicando que el usuario se ha logueado
             toast.success("¡Te has logueado correctamente!");
           } catch (error) {

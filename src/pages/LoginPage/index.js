@@ -13,7 +13,7 @@ const LoginPage = () => {
   const { token } = useTokenContext();
 
   if (token) {
-    return <Navigate to="/" />;
+    return <Navigate to="/profile" />;
   }
 
   return (
