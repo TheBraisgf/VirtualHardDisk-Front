@@ -1,0 +1,19 @@
+header {
+  padding: 1rem 4rem;
+  border: 1px solid red;
+  width: 100vw;
+}
+
+img {
+  display: flex;
+  width: 9rem;
+}
+
+header ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  font-size: 2rem;
+  list-style-type: none;
+  color: white;
+}

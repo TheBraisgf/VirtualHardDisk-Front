@@ -38,8 +38,10 @@ const RegisterForm = () => {
             if (!res.ok) {
               throw new Error(body.message);
             }
-            navigate("/email/sent");
-            toast.success("¡Te has registrado correctamente! Ya pueder logearte!");
+            navigate("/");
+            toast.success(
+              "¡Te has registrado correctamente! Ya pueder logearte!"
+            );
           } catch (error) {
             // Si salta algún error lo sacamos por consola y se lo mostramos al usuario en una alerta
             console.error(error);
