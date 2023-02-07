@@ -1,19 +1,20 @@
 import "./style.css";
 import "react-toastify/dist/ReactToastify.css";
 
-//React libraries
+//React Components
 import { useState } from "react";
-
-//Components
-import Button from "../../components/Button";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+
+//Custom Components
+import Button from "../../components/Button";
 
 const RegisterForm = () => {
   //Estados para controlar los inputs del formularios
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   return (
     <section className="registerMainSection">
       <form
@@ -37,8 +38,8 @@ const RegisterForm = () => {
             if (!res.ok) {
               throw new Error(body.message);
             }
-
-            toast.success("¡Te has logueado correctamente!");
+            navigate("/email/sent");
+            toast.success("¡Te has registrado correctamente! Ya pueder logearte!");
           } catch (error) {
             // Si salta algún error lo sacamos por consola y se lo mostramos al usuario en una alerta
             console.error(error);

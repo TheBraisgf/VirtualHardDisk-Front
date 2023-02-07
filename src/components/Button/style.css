@@ -13,3 +13,8 @@
   color: white;
   background-color: transparent;
 }
+
+.button:hover{
+  cursor: pointer;
+
+}

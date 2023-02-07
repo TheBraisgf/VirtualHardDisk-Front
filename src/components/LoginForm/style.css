@@ -1,27 +1,23 @@
-.registerMainSection {
+.loginMainSection {
   color: white;
   border: 1px solid greenyellow;
   display: flex;
   justify-content: center;
 }
 
-.registerForm {
+.loginForm {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.registerForm > input {
+.loginForm > input {
   background-color: white;
   width: 20rem;
   height: 3rem;
 }
 
-.registerForm > h1 {
+.loginForm > h1 {
   font-size: 3rem;
-}
-
-.registerForm > button:hover {
-  cursor: pointer;
 }

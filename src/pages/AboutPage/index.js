@@ -3,16 +3,19 @@ import "./style.css";
 //Components
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import RegisterForm from "../../components/RegisterForm";
 
-const RegisterPage = () => {
+//Assets
+
+const AboutPage = () => {
   return (
-    <section>
+    <>
       <Header />
-      <RegisterForm />
+      <section className="aboutPage">
+        <h1>SOBRE NOSOTROS</h1>
+      </section>
       <Footer />
-    </section>
+    </>
   );
 };
 
-export default RegisterPage;
+export default AboutPage;
