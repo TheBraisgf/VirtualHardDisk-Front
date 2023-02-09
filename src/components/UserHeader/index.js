@@ -1,4 +1,5 @@
 import "./style.css";
+import { useRef } from "react";
 
 import { Link } from "react-router-dom";
 import { useTokenContext } from "../../contexts/TokenContext";
@@ -8,13 +9,14 @@ const UserHeader = () => {
   const { setToken } = useTokenContext();
 
   return (
-    <header className="Header">
+    <header className="UserHeader">
       <Link className="link" to="/">
-        <img className="logo" src={VHD_logo} alt="logo" />
+        <img className="logoUserHeader" src={VHD_logo} alt="logo" />
       </Link>
 
       <Link className="link" to="/">
         <button
+          className="logoutButtonUserHeader"
           onClick={() => {
             setToken("");
           }}

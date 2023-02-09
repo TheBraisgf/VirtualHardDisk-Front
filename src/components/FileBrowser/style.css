@@ -23,3 +23,7 @@ div.MuiBox-root.MuiBox-root-2.chonky-chonkyRoot {
 .MuiInputAdornment-root.chonky-searchIcon.MuiInputAdornment-positionStart.MuiInputAdornment-marginDense {
   color: white !important;
 }
+.chonky-chonkyRoot {
+  background-color: #506e86 !important;
+  color: white !important;
+}
