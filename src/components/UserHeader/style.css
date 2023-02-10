@@ -1,14 +1,14 @@
 .UserHeader {
   padding: 1rem 4rem;
-  border: 1px solid red;
   width: 100vw;
   background-color: #506e86;
   display: flex;
-  gap: 50rem;
+  justify-content: space-between;
 }
 
 .logoUserHeader {
   width: 5rem;
+  user-select: none;
 }
 
 .logoutButtonUserHeader {

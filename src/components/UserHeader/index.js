@@ -1,29 +1,26 @@
 import "./style.css";
-import { useRef } from "react";
 
 import { Link } from "react-router-dom";
 import { useTokenContext } from "../../contexts/TokenContext";
+
 import VHD_logo from "../../assets/VHD_logo.png";
+import Modal from "../Modal";
+import Avatar from "../Avatar";
+import { useState } from "react";
 
 const UserHeader = () => {
-  const { setToken } = useTokenContext();
+  const [showModal, setShowModal] = useState(false);
+  const { loggedUser } = useTokenContext();
+
+  const { username, avatar } = loggedUser;
 
   return (
     <header className="UserHeader">
       <Link className="link" to="/">
         <img className="logoUserHeader" src={VHD_logo} alt="logo" />
       </Link>
-
-      <Link className="link" to="/">
-        <button
-          className="logoutButtonUserHeader"
-          onClick={() => {
-            setToken("");
-          }}
-        >
-          Logout
-        </button>{" "}
-      </Link>
+      <Avatar avatar={avatar} username={username} setShowModal={setShowModal} />
+      {showModal && <Modal setShowModal={setShowModal}></Modal>}{" "}
     </header>
   );
 };

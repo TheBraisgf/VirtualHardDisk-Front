@@ -1,0 +1,51 @@
+.modalBg {
+  background-color: rgba(0, 0, 0, 40%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+
+.modalContainer {
+  width: 50vw;
+  height: 60vh;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.userIcon {
+  width: 11rem;
+}
+
+.userModalIcon {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20rem;
+}
+
+.logoutIcon {
+  width: 2rem;
+  height: 2rem;
+  user-select: none;
+}
+
+.userModalInfo {
+  display: flex;
+  flex-direction: column;
+  margin: auto 15rem;
+  gap: 1rem;
+}
+
+.userModalInfo > input {
+  height: 3rem;
+}
+
+.userModalInfo > p {
+  text-align: center;
+  user-select: none;
+}

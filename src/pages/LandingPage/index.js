@@ -10,7 +10,7 @@ import Footer from "../../components/Footer";
 
 const LandingPage = () => {
   return (
-    <>
+    <div className="landingPage">
       <Header />
       <section className="landing">
         <img
@@ -24,7 +24,7 @@ const LandingPage = () => {
         </div>
       </section>
       <Footer />
-    </>
+    </div>
   );
 };
 

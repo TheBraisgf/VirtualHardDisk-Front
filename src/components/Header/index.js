@@ -6,10 +6,10 @@ import { useTokenContext } from "../../contexts/TokenContext";
 import VHD_logo from "../../assets/VHD_logo.png";
 
 const Header = () => {
-  const { token, setToken } = useTokenContext();
+  const { token } = useTokenContext();
   return (
     <header className="Header">
-      <Link className="link" to="/">
+      <Link to="/">
         <img className="logo" src={VHD_logo} alt="logo" />
       </Link>
 
@@ -17,26 +17,35 @@ const Header = () => {
         <ul>
           {!token && (
             <>
-              <Link to="/about">About Us</Link>
-              <Link to="/register">Register</Link>
-              <Link to="/login">Login</Link>
+              <li>
+                <Link className="linkHeader" to="/about">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link className="linkHeader" to="/register">
+                  Register
+                </Link>
+              </li>
+              <li>
+                <Link className="linkHeader" to="/login">
+                  Login
+                </Link>
+              </li>
             </>
           )}
 
           {token && (
             <>
-              <Link to="/about">About Us</Link>
               <li>
-                <Link to="/profile">PROFILE</Link>
+                <Link className="linkHeader" to="/about">
+                  About Us
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => {
-                    setToken("");
-                  }}
-                >
-                  Logout
-                </button>
+                <Link className="linkHeader" to="/profile">
+                  UserPage
+                </Link>
               </li>
             </>
           )}

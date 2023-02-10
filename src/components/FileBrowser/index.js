@@ -22,7 +22,6 @@ export const FileBrowser = ({ files }) => {
   const upload = () => {
     var input = document.createElement("input");
     input.type = "file";
-
     input.onchange = async (e) => {
       const formData = new FormData();
       var file = e.target.files[0];
@@ -124,8 +123,28 @@ export const FileBrowser = ({ files }) => {
   };
 
   //CREATE FOLDER
-  const createFolder = (folderName) => {
-    console.log(folderName);
+  const createFolder = async (folderName) => {
+    try {
+      let newFolderName = folderName;
+      const res = await fetch(`http://localhost:4000/folder`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ newFolderName }),
+      });
+
+      // Verificamos si la respuesta viene correcta
+      if (!res.ok) {
+        throw new Error();
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error(error.message);
+    } finally {
+      toast.success("Archivo descargado correctamente");
+    }
   };
 
   const handleFileAction = (data) => {
