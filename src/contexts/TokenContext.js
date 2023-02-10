@@ -38,6 +38,7 @@ export const CustomTokenContextProvider = ({ children }) => {
         }
 
         setLoggedUser(body.data.user);
+        console.log(body);
       } catch (error) {
         // Si hay algún error cargando los datos del usuario logueado (por ejemplo, porque el token caducó) le lanzamos una alerta de que hubo un error al iniciar sesión, lo deslogueamos y lo redirigimos a login
         console.error(error);

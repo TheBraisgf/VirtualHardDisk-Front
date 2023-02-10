@@ -49,3 +49,9 @@
   text-align: center;
   user-select: none;
 }
+
+.userModalInfo input::placeholder {
+  color: Black;
+  opacity: 1;
+  text-align: center;
+}

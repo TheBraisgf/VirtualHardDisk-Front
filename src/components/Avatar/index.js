@@ -2,7 +2,8 @@ import defaultAvatar from "../../assets/userIcon.png";
 import "./style.css";
 
 // Pinta el avatar del usuario o, si no tiene, el avatar por defecto
-const Avatar = ({ avatar, username, setShowModal }) => {
+const Avatar = ({ photo, username, setShowModal }) => {
+  console.log("FOTO:", photo);
   return (
     <img
       className="avatarImg"
@@ -11,7 +12,7 @@ const Avatar = ({ avatar, username, setShowModal }) => {
 
         setShowModal(true);
       }}
-      src={avatar ? `http://localhost:4000/${avatar}` : defaultAvatar}
+      src={photo ? `http://localhost:4000/${photo}` : defaultAvatar}
       alt={`${username} avatar`}
     />
   );

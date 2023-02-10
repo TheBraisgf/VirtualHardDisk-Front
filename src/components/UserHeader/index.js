@@ -12,14 +12,14 @@ const UserHeader = () => {
   const [showModal, setShowModal] = useState(false);
   const { loggedUser } = useTokenContext();
 
-  const { username, avatar } = loggedUser;
+  const { username, photo } = loggedUser;
 
   return (
     <header className="UserHeader">
       <Link className="link" to="/">
         <img className="logoUserHeader" src={VHD_logo} alt="logo" />
       </Link>
-      <Avatar avatar={avatar} username={username} setShowModal={setShowModal} />
+      <Avatar photo={photo} username={username} setShowModal={setShowModal} />
       {showModal && <Modal setShowModal={setShowModal}></Modal>}{" "}
     </header>
   );
