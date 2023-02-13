@@ -1,12 +1,12 @@
 import "./style.css";
 import { useTokenContext } from "../../contexts/TokenContext";
-import Button from "../../components/Button";
 import logoutIcon from "../../assets/logoutIcon.png";
 import UploadAvatar from "../UploadAvatar";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useState } from "react";
+import ButtonModal from "../ButtonModal";
 
 // Pinta un modal blanco con un fondo oscuro. El contenido del modal es lo recibido en la prop children. También recibe setShowModal para poder cerrar el modal cuando hagamos click en el fondo oscuro
 const Modal = ({ setShowModal }) => {
@@ -111,7 +111,7 @@ const Modal = ({ setShowModal }) => {
             clicking the button below.
           </p>
 
-          <Button text="Change Info" />
+          <ButtonModal text="Change Info" />
         </form>
       </div>
     </div>

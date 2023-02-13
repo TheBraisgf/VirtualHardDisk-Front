@@ -1,11 +1,12 @@
+
+
 #chonckytextcolor {
-  color: white !important;
-  background-color: #506e86 !important;
+  color: white;
+  background-color: #506e86;
 }
 
 div.MuiBox-root.MuiBox-root-2.chonky-chonkyRoot {
   background-color: #506e86;
-  border-bottom-color: red;
   color: white;
 }
 
@@ -21,9 +22,29 @@ div.MuiBox-root.MuiBox-root-2.chonky-chonkyRoot {
 }
 
 .MuiInputAdornment-root.chonky-searchIcon.MuiInputAdornment-positionStart.MuiInputAdornment-marginDense {
-  color: white !important;
+  color: white;
 }
 .chonky-chonkyRoot {
   background-color: #506e86 !important;
   color: white !important;
+}
+/* CAMBIA EL COLOR DE LOS ICONOS */
+.chonky-iconWithText {
+  color: #fcb040 !important;
+}
+
+/* .chonky-iconWithText svg {
+  color: #fcb040 !important;
+  text-decoration: none;
+} */
+
+/* .MuiButtonBase-root.MuiButton-root.MuiButton-text.baseBreadcrumb-0-2-290.baseBreadcrumb-d3-0-2-297.currentBreadcrumb-0-2-292.chonky-baseButton.Mui-disabled.Mui-disabled {
+  color: #fcb040;
+  text-decoration: none !important;
+} */
+
+/* CAMBIA EL COLOR DEL ROOT PERO CAMBIA TAMBEIN LOS DEMAS Y NO SE LE PUEDE AÑADIR CLASE*/
+.MuiButton-label span {
+  color: white !important;
+  text-decoration: none !important;
 }

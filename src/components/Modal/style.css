@@ -38,11 +38,17 @@
   display: flex;
   flex-direction: column;
   margin: auto 15rem;
-  gap: 1rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .userModalInfo > input {
   height: 3rem;
+  border: none;
+  
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  
 }
 
 .userModalInfo > p {
@@ -51,7 +57,24 @@
 }
 
 .userModalInfo input::placeholder {
-  color: Black;
+  color: #fcb040;
+
+  border: none;
+  background-color: #506e86;
   opacity: 1;
   text-align: center;
+  margin: 0%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
 }
+
+input:focus {
+  outline: none;
+  background-color: #fcb040;
+  color: #506e86;
+  text-align: center;
+}
+
+

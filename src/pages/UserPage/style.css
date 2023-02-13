@@ -1,4 +1,4 @@
-#chonckytextcolor {
+/* #chonckytextcolor {
   color: white !important;
   background-color: #506e86 !important;
 }
@@ -22,4 +22,59 @@ div.MuiBox-root.MuiBox-root-2.chonky-chonkyRoot {
 
 .MuiInputAdornment-root.chonky-searchIcon.MuiInputAdornment-positionStart.MuiInputAdornment-marginDense {
   color: white !important;
+}
+*/
+/* #userpage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}  */
+
+/* *{height: 20vh;} */
+
+#userpage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border: 0 solid transparent;
+  animation: border-animation 0.5s linear forwards;
+ 
+}
+
+@keyframes border-animation {
+  0% {
+    border-color: #fcb040;
+    border-width: 6px;
+  }
+  25% {
+    border-color: #fcb040;
+    border-width: 4px;
+  }
+  40% {
+    border-color: #fcb040;
+    border-width: 3px;
+  }
+  50% {
+    border-color: #fcb040;
+    border-width: 2px;
+  }
+  75% {
+    border-color: #fcb040;
+    border-width: 1px;
+  }
+  85% {
+    border-color: #fcb040;
+    border-width: 0.5px;
+  }
+  95% {
+    border-color: #fcb040;
+    border-width: 0.2px;
+  }
+  100% {
+    border-color: #fcb040;
+    border-width: 0;
+  }
 }
