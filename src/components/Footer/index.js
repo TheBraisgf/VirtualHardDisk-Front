@@ -16,6 +16,7 @@ const Footer = () => {
       >
         Pabloberu
       </a>
+      <p>&nbsp;&nbsp;&nbsp;2023</p>
     </footer>
   );
 };
