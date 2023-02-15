@@ -49,6 +49,10 @@ export const FileBrowser = ({ files }) => {
       const formData = new FormData();
       var file = e.target.files[0];
       formData.set("file", file);
+
+      if (folderChain.length > 1) {
+        formData.append("folder", folderChain[1].name);
+      }
       try {
         const res = await fetch("http://localhost:4000/files", {
           method: "POST",
