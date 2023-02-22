@@ -1,0 +1,56 @@
+#modalFolderContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  max-width: 50vw;
+  min-height: 5vh;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.h1FolderName {
+  color: #333;
+  font-size: 2.5vw;
+  margin: 0;
+  padding: 1.5vh 0;
+  text-align: center;
+}
+
+#chonckytextcolor {
+  color: black !important;
+}
+.folderModalInput {
+  display: flex;
+  background-color: #506e86;
+  height: 5vh;
+  width: 35vw;
+  margin: auto;
+  font-size: 2vw;
+}
+
+.folderModalInput::placeholder {
+  color: #fcb040;
+}
+
+.folderModalButton {
+  min-width: 20vw;
+  min-height: 10vh;
+  margin: auto;
+}
+
+.formNewFolder {
+  display: flex;
+  flex-direction: column;
+  min-height: 25vh;
+}
+
+.folderModalButton > a {
+  font-size: 4vw;
+}
+
+@media screen and (max-width: 768px) {
+  #modalFolderContainer {
+    width: 80vw;
+  }
+}

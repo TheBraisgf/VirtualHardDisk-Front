@@ -7,6 +7,7 @@ import { setChonkyDefaults } from "chonky";
 import { ChonkyIconFA } from "chonky-icon-fontawesome";
 import { useTokenContext } from "../../contexts/TokenContext";
 import { toast } from "react-toastify";
+import FolderModal from "../FolderModal";
 
 setChonkyDefaults({ iconComponent: ChonkyIconFA });
 
@@ -18,6 +19,7 @@ export const FileBrowser = ({ files }) => {
     { id: userId, name: "Home", isDir: true },
   ]);
   const [currentFiles, setFiles] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (loggedUser.userId) {
@@ -85,7 +87,11 @@ export const FileBrowser = ({ files }) => {
 
   //DELETE
   const eraseFiles = async (data) => {
-    console.log("FOLDERCHAIN ERASE:", folderChain);
+    console.log("FOLDERCHAIN ERASE:", folderChain[1]);
+    let folderName = "";
+    if (folderChain.length > 1) {
+      folderName = folderChain[1].name;
+    }
     try {
       const res = await fetch(
         `http://localhost:4000/files/${data.state.contextMenuTriggerFile.id}`,
@@ -95,7 +101,7 @@ export const FileBrowser = ({ files }) => {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
           },
-          body: JSON.stringify({ folderName: folderChain[0].name }),
+          body: JSON.stringify({ folderName: folderName }),
         }
       );
 
@@ -187,38 +193,10 @@ export const FileBrowser = ({ files }) => {
     }
   };
 
-  //CREATE FOLDER
-  const createFolder = async (folderName) => {
-    try {
-      let newFolderName = folderName;
-      const res = await fetch(`http://localhost:4000/folder`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ newFolderName }),
-      });
-
-      // Verificamos si la respuesta viene correcta
-      if (!res.ok) {
-        throw new Error();
-      }
-    } catch (error) {
-      console.error(error);
-      toast.error(error.message);
-    } finally {
-      toast.success("Carpeta creada correctamente");
-      setTimeout(() => {
-        window.location.reload();
-      }, 2000);
-    }
-  };
-
   //FOLDERS PATH
 
   const handleFileAction = (data) => {
-    console.log(data);
+    console.log("MODAL:", setShowModal);
 
     switch (data.id) {
       case "upload_files":
@@ -242,8 +220,7 @@ export const FileBrowser = ({ files }) => {
         break;
 
       case "create_folder":
-        const folderName = prompt("Nombre de tu carpeta:");
-        createFolder(folderName);
+        setShowModal(true);
         break;
 
       case "open_files":
@@ -314,6 +291,7 @@ export const FileBrowser = ({ files }) => {
         onFileAction={handleFileAction}
         enableDragAndDrop={true}
       />
+      {showModal && <FolderModal setShowModal={setShowModal}></FolderModal>}
     </div>
   );
 };
