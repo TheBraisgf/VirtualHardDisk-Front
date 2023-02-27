@@ -82,12 +82,10 @@ const Modal = ({ setShowModal }) => {
                 throw new Error(body.message);
               }
               navigate("/profile");
-              toast.success(
-                "Se ha modificado con exito la informacion de usuario"
-              );
+              toast.success("User information has been successfully modified");
               setTimeout(() => {
                 window.location.reload();
-              }, 1000);
+              }, 2000);
             } catch (error) {
               // Si salta algún error lo sacamos por consola y se lo mostramos al usuario en una alerta
               console.error(error);

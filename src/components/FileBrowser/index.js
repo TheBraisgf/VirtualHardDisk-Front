@@ -71,11 +71,11 @@ export const FileBrowser = ({ files }) => {
         if (!res.ok) {
           throw new Error(body.message);
         }
+        toast.success("Upload completed!");
       } catch (error) {
         console.log(error);
         toast.error(error.message);
       } finally {
-        toast.success("¡Subida completada!");
         setTimeout(() => {
           window.location.reload();
         }, 2000);
@@ -116,7 +116,7 @@ export const FileBrowser = ({ files }) => {
       console.log(error);
       toast.error(error.message);
     } finally {
-      toast.success("Archivo borrado correctamente");
+      toast.success("File deleted successfully");
       setTimeout(() => {
         window.location.reload();
       }, 2000);
@@ -150,11 +150,10 @@ export const FileBrowser = ({ files }) => {
       downloadLink.href = URL.createObjectURL(file);
       downloadLink.download = data.state.contextMenuTriggerFile.name;
       downloadLink.click();
+      toast.success("File downloaded successfully");
     } catch (error) {
       console.error(error);
       toast.error(error.message);
-    } finally {
-      toast.success("Archivo descargado correctamente");
     }
   };
 
@@ -189,7 +188,7 @@ export const FileBrowser = ({ files }) => {
       console.error(error);
       toast.error(error.message);
     } finally {
-      toast.success("Archivo descargado correctamente");
+      toast.success("File downloaded successfully");
     }
   };
 

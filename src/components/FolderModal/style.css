@@ -1,8 +1,8 @@
 #modalFolderContainer {
   display: flex;
   flex-direction: column;
-  width: 50vw;
-  max-width: 50vw;
+  width: 40vw;
+
   min-height: 5vh;
   background-color: white;
   border-radius: 1rem;
@@ -11,7 +11,7 @@
 
 .h1FolderName {
   color: #333;
-  font-size: 2.5vw;
+  font-size: 3.5vw;
   margin: 0;
   padding: 1.5vh 0;
   text-align: center;
@@ -27,6 +27,7 @@
   width: 35vw;
   margin: auto;
   font-size: 2vw;
+   border-radius:5px;
 }
 
 .folderModalInput::placeholder {
@@ -34,8 +35,11 @@
 }
 
 .folderModalButton {
-  min-width: 20vw;
-  min-height: 10vh;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  width: 20vw;
+  height: 10vh;
   margin: auto;
 }
 
@@ -51,6 +55,31 @@
 
 @media screen and (max-width: 768px) {
   #modalFolderContainer {
-    width: 80vw;
+    width: 70vw;
+  }
+  .h1FolderName {
+    font-size: 7vw;
+  }
+
+  .folderModalInput {
+    font-size: 3.5vw;
+    height: 5vh;
+    width: 40vw;
+   
+  }
+  .folderModalButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 6vh;
+    margin: auto;
+
+  }
+  .folderModalButton > a {
+    font-size: 8vw;
+    padding: 0;
+  
+    
   }
 }
